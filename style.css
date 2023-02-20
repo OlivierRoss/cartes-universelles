@@ -1,0 +1,32 @@
+#map {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer #representation {
+  width: 5vw;
+  height: 2vh;
+
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 1px solid black;
+
+  margin-left: 10px;
+}
+
+footer #nombre {
+  font-family: "Arial";
+}
