@@ -17,6 +17,8 @@ window.onload = () => {
     let zoom = ev.zoom;
     document.getElementById("nombre").innerHTML = interpretation_zoom(zoom);
   });
+
+  viewer.viewport.zoomTo(1);
 }
 
 function interpretation_zoom (zoom) {
