@@ -2,10 +2,28 @@ body {
   margin: 0;
 }
 
-#map {
+#map, #logo {
   position: fixed;
   width: 100vw;
   height: 100vh;
+}
+
+#logo {
+  opacity: 1;
+  background-color: red;
+  transition: opacity 2s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo.cache {
+  opacity: 0;
+}
+
+#logo img {
+  width: 50%;
 }
 
 footer {
