@@ -1,8 +1,9 @@
 window.onload = () => {
-  let basename = "cat";
+  let basename = "panorama-a";
+
   let id_el_osd = "map";
   let set_min_zoom = false;
-  let delai_disparition_logo = 2000; // 2000ms
+  let delai_disparition_logo = 500; // 2000ms
 
   // https://openseadragon.github.io/docs/
   viewer = OpenSeadragon({
