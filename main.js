@@ -49,5 +49,5 @@ window.onload = () => {
 }
 
 function interpretation_zoom (zoom) {
-  return Math.round(zoom);
+  return Math.round(zoom)*250;
 }
