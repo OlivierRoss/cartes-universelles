@@ -1,11 +1,52 @@
 body {
+  font-family: montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   margin: 0;
 }
 
-#map, #logo {
+a {
+	text-decoration: none;
+  color: black;
+}
+
+header ul {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+}
+
+header li {
+  font-size: 0.875em;
+  font-weight: 600;
+  border-radius: 25px;
+  background-color:rgba(255, 255, 255);
+  padding: 0.875em;
+}
+
+header li:hover {
+  box-shadow: 10px 10px 5px rgba(32, 32, 32, 0.3);
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	transition:0.5s ease-out;
+}
+
+#logo {
   position: fixed;
+  top: 0px;
   width: 100vw;
   height: 100vh;
+}
+
+#map {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 #logo {
@@ -28,27 +69,41 @@ body {
 
 footer {
   position: fixed;
-  bottom: 5%;
+  bottom: 1em;
   right: 5%;
+  padding-right: 5px;
+  padding-left: 5px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255);
 }
 
+footer #nombre {
+  font-size: 0.75em;
+}
 footer #representation {
-  width: 5vw;
-  height: 2vh;
+  width: 8vw;
+  height: 1vh;
 
   border-left: 2px solid black;
   border-right: 2px solid black;
   border-bottom: 1px solid black;
 
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
-footer #nombre {
-  font-family: "Arial";
-}
+/* media queries */
+@media screen and (min-width: 620px){
+  header ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  header li {
+    margin-left: 10px;
+  }
+} 
