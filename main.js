@@ -10,7 +10,7 @@ window.onload = () => {
     id: id_el_osd,
     prefixUrl: `ressources/${basename}_files/`,
     tileSources: `ressources/${basename}.dzi`,
-    defaultZoomLevel: 1,
+    defaultZoomLevel: 1.4,
     minZoomLevel: 1,
     visibilityRatio: 1,
     constrainDuringPan: true,
