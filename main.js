@@ -1,5 +1,5 @@
 window.onload = () => {
-  let basename = "panorama-a";
+  // BASENAME DEFINI DANS LES FICHIERS HTML
 
   let id_el_osd = "map";
   let set_min_zoom = false;
