@@ -10,6 +10,11 @@ a {
   color: black;
 }
 
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
 header ul {
   display: flex;
   width: 100%;
@@ -34,13 +39,6 @@ header li:hover {
 	transition:0.5s ease-out;
 }
 
-#logo {
-  position: fixed;
-  top: 0px;
-  width: 100vw;
-  height: 100vh;
-}
-
 #map {
   position: fixed;
   top: 0px;
@@ -51,12 +49,21 @@ header li:hover {
 
 #logo {
   opacity: 1;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   transition: opacity 2s ease;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  height: 100vh;
+	width: 100vw;
+  position: fixed;
+  top: 0px;
+}
+
+#txtLogo {
+  padding-top: 200px;
+  padding-left: 200px;
 }
 
 #logo.cache {
