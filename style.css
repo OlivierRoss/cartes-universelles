@@ -10,11 +10,6 @@ a {
   color: black;
 }
 
-h2 {
-  font-size: 2em;
-  font-weight: 500;
-}
-
 header ul {
   display: flex;
   width: 100%;
@@ -62,8 +57,13 @@ header li:hover {
 }
 
 #txtLogo {
-  padding-top: 200px;
-  padding-left: 200px;
+  padding-top: 100px;
+  padding-left: 25px;
+}
+
+#txtLogo h2 {
+  font-size: 1.3em;
+  font-weight: 500;
 }
 
 #logo.cache {
@@ -113,4 +113,15 @@ footer #representation {
   header li {
     margin-left: 10px;
   }
+}
+@media screen and (min-width: 800px){
+  #txtLogo h2 {
+      font-size: 2em;
+      font-weight: 500;
+    }
+  
+    #txtLogo {
+      padding-top: 200px;
+      padding-left: 100px;
+    }
 } 
