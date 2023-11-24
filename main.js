@@ -10,10 +10,11 @@ window.onload = () => {
     id: id_el_osd,
     prefixUrl: `ressources/${basename}_files/`,
     tileSources: `ressources/${basename}.dzi`,
-    //defaultZoomLevel: 5,
-    //minZoomLevel: 1,
+    //showNavigator: true,
+    defaultZoomLevel: 1,
+    minZoomLevel: 0.3,
     //visibilityRatio: 1,
-    //constrainDuringPan: true,
+    constrainDuringPan: true,
     showNavigationControl: false
   });
 
