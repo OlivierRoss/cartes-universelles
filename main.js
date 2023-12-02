@@ -50,5 +50,5 @@ window.onload = () => {
 }
 
 function interpretation_zoom (zoom) {
-  return Math.round(zoom) * 250;
+  return Math.round(zoom) //* 250;
 }
