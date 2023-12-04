@@ -12,8 +12,10 @@ window.onload = () => {
     tileSources: `ressources/${basename}.dzi`,
     showNavigator: true,
     navigatorPosition: "BOTTOM_LEFT",
-    defaultZoomLevel: 0.9,
-    minZoomLevel: 0.5,
+    navigatorHeight:   "90px",
+    navigatorWidth:    "125px",
+    defaultZoomLevel: 4,
+    minZoomLevel: 1,
     visibilityRatio: 1,
     constrainDuringPan: true,
     showNavigationControl: false
@@ -31,9 +33,9 @@ window.onload = () => {
   });
 
   // Reload when device orientation changes
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener('orientationchange', function() { location.reload(); }, false);
-}
+  screen.orientation.addEventListener("change", (event) => {
+    location.reload()
+  });
 
   // Zoom initial
   let container = document.getElementById(id_el_osd);
