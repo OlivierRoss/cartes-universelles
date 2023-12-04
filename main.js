@@ -11,9 +11,9 @@ window.onload = () => {
     prefixUrl: `ressources/${basename}_files/`,
     tileSources: `ressources/${basename}.dzi`,
     //showNavigator: true,
-    defaultZoomLevel: 4,
+    //defaultZoomLevel: 4,
     minZoomLevel: 1,
-    visibilityRatio: 1,
+    visibilityRatio: 0.9,
     constrainDuringPan: true,
     showNavigationControl: false
   });
