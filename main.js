@@ -31,9 +31,9 @@ window.onload = () => {
   });
 
   // Reload when device orientation changes
-  screen.addEventListener("orientationchange", function() {
-    screen.location.reload();
-  });
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener('orientationchange', function() { location.reload(); }, false);
+}
 
   // Zoom initial
   let container = document.getElementById(id_el_osd);
