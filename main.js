@@ -44,6 +44,13 @@ window.onload = () => {
     });
   });
 
+  // Go Fullscreen on-click sur li
+    document.querySelector(".choix").addEventListener('click', goFullScreen);
+    
+    function goFullScreen() {
+      document.documentElement.requestFullscreen().catch(console.log);
+    };
+
   // Zoom initial
   let container = document.getElementById(id_el_osd);
   if(container.clientHeight > container.clientWidth) {
