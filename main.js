@@ -37,6 +37,13 @@ window.onload = () => {
     location.reload()
   });
 
+  // Go Fullscreen
+  document.addEventListener("dblclick", () => {
+    document.documentElement.requestFullscreen().catch((e) => {
+      console.log(e);
+    });
+  });
+
   // Zoom initial
   let container = document.getElementById(id_el_osd);
   if(container.clientHeight > container.clientWidth) {
