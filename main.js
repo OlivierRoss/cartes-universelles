@@ -13,7 +13,7 @@ window.onload = () => {
     showNavigator: true,
     navigatorPosition: "BOTTOM_LEFT",
     defaultZoomLevel: 0.9,
-    //minZoomLevel: 1,
+    minZoomLevel: 0.5,
     visibilityRatio: 1,
     constrainDuringPan: true,
     showNavigationControl: false
@@ -32,7 +32,7 @@ window.onload = () => {
 
   // Reload when device orientation changes
   screen.addEventListener("orientationchange", function() {
-    window.location.reload();
+    screen.location.reload();
   });
 
   // Zoom initial
