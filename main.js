@@ -10,10 +10,11 @@ window.onload = () => {
     id: id_el_osd,
     prefixUrl: `ressources/${basename}_files/`,
     tileSources: `ressources/${basename}.dzi`,
-    //showNavigator: true,
-    //defaultZoomLevel: 4,
-    minZoomLevel: 1,
-    visibilityRatio: 0.9,
+    showNavigator: true,
+    navigatorPosition: "BOTTOM_LEFT",
+    defaultZoomLevel: 0.9,
+    //minZoomLevel: 1,
+    visibilityRatio: 1,
     constrainDuringPan: true,
     showNavigationControl: false
   });
@@ -27,6 +28,11 @@ window.onload = () => {
     }
 
     document.getElementById("nombre").innerHTML = interpretation_zoom(zoom);
+  });
+
+  // Reload when device orientation changes
+  screen.addEventListener("orientationchange", function() {
+    window.location.reload();
   });
 
   // Zoom initial
