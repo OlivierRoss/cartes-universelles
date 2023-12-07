@@ -10,7 +10,11 @@ window.onload = () => {
     id: id_el_osd,
     prefixUrl: `ressources/${basename}_files/`,
     tileSources: `ressources/${basename}.dzi`,
-    defaultZoomLevel: 1,
+    showNavigator: true,
+    navigatorPosition: "BOTTOM_LEFT",
+    navigatorHeight:   "90px",
+    navigatorWidth:    "125px",
+    defaultZoomLevel: 4,
     minZoomLevel: 1,
     visibilityRatio: 1,
     constrainDuringPan: true,
@@ -27,6 +31,25 @@ window.onload = () => {
 
     document.getElementById("nombre").innerHTML = interpretation_zoom(zoom);
   });
+
+  // Reload when device orientation changes
+  screen.orientation.addEventListener("change", (event) => {
+    location.reload()
+  });
+
+  // Go Fullscreen
+  document.addEventListener("dblclick", () => {
+    document.documentElement.requestFullscreen().catch((e) => {
+      console.log(e);
+    });
+  });
+
+  // Go Fullscreen on-click sur li
+    document.querySelector(".choix").addEventListener('click', goFullScreen);
+    
+    function goFullScreen() {
+      document.documentElement.requestFullscreen().catch(console.log);
+    };
 
   // Zoom initial
   let container = document.getElementById(id_el_osd);
@@ -49,5 +72,5 @@ window.onload = () => {
 }
 
 function interpretation_zoom (zoom) {
-  return Math.round(zoom) * 250;
+  return Math.round(zoom) //* 250;
 }
