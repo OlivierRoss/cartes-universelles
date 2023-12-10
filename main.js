@@ -21,7 +21,7 @@ window.onload = () => {
     navigatorHeight:   "90px",
     navigatorWidth:    "125px",
     defaultZoomLevel: 4,
-    minZoomLevel: 0.8,
+    minZoomLevel: 0.2,
     visibilityRatio: 1,
     constrainDuringPan: true,
     showNavigationControl: false,
