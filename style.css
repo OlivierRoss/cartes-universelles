@@ -22,7 +22,7 @@ header li {
   font-size: 0.7em;
   font-weight: 600;
   border-radius: 25px;
-  background-color:rgba(255, 255, 255, 0.8);
+  background-color:rgba(255, 255, 255, 0.9);
   padding: 0.7em;
   margin: 2px;
 }
@@ -77,31 +77,74 @@ header li:hover {
   width: 50%;
 }
 
-footer {
+#goFullScreen:hover {
+  color: rgb(74, 15, 5);
+  font-size: 1.5em;
+  transform: scale(1.2);
+	-webkit-transition: 0.7s ease-out;
+	-moz-transition: 0.7s ease-out;
+	-o-transition: 0.7s ease-out;
+	transition: 0.7s ease-out;
+  box-shadow: 10px 10px 5px rgba(32, 32, 32, 0.3);
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	transition:0.5s ease-out;
+}
+
+#exitFullScreen:hover {
+  color: rgb(74, 15, 5);
+  font-size: 1.5em;
+  transform: scale(1.2);
+	-webkit-transition: 0.7s ease-out;
+	-moz-transition: 0.7s ease-out;
+	-o-transition: 0.7s ease-out;
+	transition: 0.7s ease-out;
+  box-shadow: 10px 10px 5px rgba(32, 32, 32, 0.3);
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	transition:0.5s ease-out;
+}
+
+footer{
   position: fixed;
+  width: 100vw;
   bottom: 1em;
   right: 5%;
   padding-right: 5px;
   padding-left: 5px;
-
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+}
 
-  background-color: rgba(255, 255, 255, 0.8);
+#fullScreen{
+  padding-right: 20px;
+}
+
+.fa-solid {
+  padding: 10px;
+  color: rgb(255, 255, 255, 0.9);
+  font-size: 1.5em;
+  padding: 5px;
 }
 
 footer #nombre {
   font-size: 0.6em;
 }
+
+footer #echelle {
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255,0.9);
+}
+
 footer #representation {
   width: 8vw;
   height: 1vh;
-
   border-left: 2px solid black;
   border-right: 2px solid black;
   border-bottom: 1px solid black;
-
   margin-left: 20px;
 }
 
@@ -127,3 +170,11 @@ footer #representation {
       padding-left: 100px;
     } */
 } 
+
+@media screen and (orientation: portrait) {
+  /* Add CSS styles for Portrait orientation */
+}
+
+@media screen and (orientation: landscape) {
+  /* Add CSS styles for Landscape orientation */
+}
