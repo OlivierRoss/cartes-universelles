@@ -77,8 +77,12 @@ header li:hover {
   width: 50%;
 }
 
+#goFullScreen {
+  display: block;
+}
+
 #goFullScreen:hover {
-  color: rgb(74, 15, 5);
+  color: rgb(143, 0, 0);
   font-size: 1.5em;
   transform: scale(1.2);
 	-webkit-transition: 0.7s ease-out;
@@ -92,8 +96,12 @@ header li:hover {
 	transition:0.5s ease-out;
 }
 
+#exitFullScreen{
+  display: none;
+}
+
 #exitFullScreen:hover {
-  color: rgb(74, 15, 5);
+  color: rgb(143, 0, 0);
   font-size: 1.5em;
   transform: scale(1.2);
 	-webkit-transition: 0.7s ease-out;

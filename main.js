@@ -13,7 +13,11 @@ window.onload = () => {
     prefixUrl: `ressources/${basename}_files/`,
     tileSources: `ressources/${basename}.dzi`,
     showNavigator: true,
-    //navigatorPosition: "BOTTOM_LEFT",
+    navigatorPosition: "ABSOLUTE",
+    navigatorTop:      "100px",
+    navigatorLeft:     "4px",
+    navigatorHeight:   "120px",
+    navigatorWidth:    "145px",
     navigatorHeight:   "90px",
     navigatorWidth:    "125px",
     defaultZoomLevel: 4,
@@ -34,11 +38,6 @@ window.onload = () => {
     document.getElementById("nombre").innerHTML = interpretation_zoom(zoom);
   });
 
-  //Reload when device orientation = portrait
-  //   screen.orientation.addEventListener("change", (event) => {
-  //   location.reload()
-  // });
-
   // Detect Landscape or Portrait mode
   portraitChangement.addEventListener('change', (event) => {
     // Check if orientation is portrait
@@ -50,34 +49,35 @@ window.onload = () => {
     }
   });
 
-  // // Go Fullscreen
-  // document.addEventListener("dblclick", () => {
-  //   document.documentElement.requestFullscreen().catch((e) => {
-  //     console.log(e);
-  //   });
-  // });
+    /* Fullscreen */
+    /* Get the documentElement (<html>) to display the page in fullscreen */
+    var elem = document.documentElement;
 
-  // Go Fullscreen on-click sur arrows
+    /* View in fullscreen */
     document.querySelector("#goFullScreen").addEventListener('click', () => {
-      document.documentElement.requestFullscreen();
-      console.log('Went full screen');
+      document.querySelector("#goFullScreen").style.display = 'none';
+      document.querySelector("#exitFullScreen").style.display = 'block';
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
     });
 
-   // Exit Fullscreen on-click sur arrows
-   document.querySelector("#exitFullScreen").addEventListener('click', () => {
-    document.documentElement.exitFullscreen();
-    console.log('Left full screen');
-  });   
-
-  // function closeFullscreen() {
-  //   if (document.exitFullscreen) {
-  //     document.exitFullscreen();
-  //   } else if (document.webkitExitFullscreen) { /* Safari */
-  //     document.webkitExitFullscreen();
-  //   } else if (document.msExitFullscreen) { /* IE11 */
-  //     document.msExitFullscreen();
-  //   }
-  // }
+    /* Exit fullscreen */
+    document.querySelector("#exitFullScreen").addEventListener('click', () => {
+      document.querySelector("#exitFullScreen").style.display = 'none';
+      document.querySelector("#goFullScreen").style.display = 'block';
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+      }
+    });
 
   // Zoom initial
   let container = document.getElementById(id_el_osd);
