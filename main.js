@@ -63,7 +63,10 @@ window.onload = () => {
         elem.webkitRequestFullscreen();
       } else if (elem.msRequestFullscreen) { /* IE11 */
         elem.msRequestFullscreen();
+      } else {
+        document.querySelector("fullScreen").style.display = 'none';
       }
+      
     });
 
     /* Exit fullscreen */
