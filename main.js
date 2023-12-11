@@ -4,11 +4,11 @@ window.onload = () => {
   let id_el_osd = "map";
   let set_min_zoom = false;
   let delai_disparition_logo = 500; // 2000ms
-  const portraitOuverture = window.matchMedia('(orientation: portrait)').matches;
+  //const portraitOuverture = window.matchMedia('(orientation: portrait)').matches;
   const portraitChangement = window.matchMedia('(orientation: portrait)');
 
   // https://openseadragon.github.io/docs/
-  viewer = OpenSeadragon({
+ let viewer = OpenSeadragon({
     id: id_el_osd,
     prefixUrl: `ressources/${basename}_files/`,
     tileSources: `ressources/${basename}.dzi`,
@@ -20,8 +20,8 @@ window.onload = () => {
     navigatorWidth:    "145px",
     navigatorHeight:   "90px",
     navigatorWidth:    "125px",
-    defaultZoomLevel: 4,
-    minZoomLevel: 0.2,
+    //defaultZoomLevel: 4,
+    minZoomLevel: 0,
     visibilityRatio: 1,
     constrainDuringPan: true,
     showNavigationControl: false,
@@ -40,13 +40,14 @@ window.onload = () => {
 
   // Detect Landscape or Portrait mode
   portraitChangement.addEventListener('change', (event) => {
+    location.reload()
     // Check if orientation is portrait
-    if (event.matches) {
-      console.log('Device orientation is Portrait');
-        location.reload()
-    } else {
-      console.log('Device orientation is Landscape');
-    }
+    // if (event.matches) {
+    //   console.log('Device orientation is Portrait');
+    //     //location.reload()
+    // } else {
+    //   console.log('Device orientation is Landscape');
+    // }
   });
 
     /* Fullscreen */
@@ -59,8 +60,8 @@ window.onload = () => {
       document.querySelector("#exitFullScreen").style.display = 'block';
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
+      // } else if (elem.webkitRequestFullscreen) { /* Safari */
+      //   elem.webkitRequestFullscreen();
       } else if (elem.msRequestFullscreen) { /* IE11 */
         elem.msRequestFullscreen();
       } else {
@@ -82,11 +83,21 @@ window.onload = () => {
       }
     });
 
-  // Zoom initial
-  let container = document.getElementById(id_el_osd);
-  if(container.clientHeight > container.clientWidth) {
+  //Zoom initial vertical
+  let containerv = document.getElementById(id_el_osd);
+  if(containerv.clientHeight > containerv.clientWidth) {
     setTimeout(() => {
       viewer.viewport.fitVertically();
+      set_min_zoom = true;
+      viewer.minZoomLevel = containerv.clientHeight
+    }, delai_disparition_logo);
+  }
+
+  //Zoom initial horizontal
+  let containerh = document.getElementById(id_el_osd);
+  if(containerh.clientWidth > containerh.clientHeight) {
+    setTimeout(() => {
+      viewer.viewport.fitHorizontally();
       set_min_zoom = true;
     }, delai_disparition_logo);
   }
