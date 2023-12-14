@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.35 15.61">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Montserrat-SemiBold, Montserrat;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .cls-2 {
+        fill: #4285f4;
+      }
+
+      .cls-3 {
+        fill: #f4b400;
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        fill: #db4437;
+      }
+
+      .cls-5 {
+        fill: #0f9d58;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <text class="cls-1" transform="translate(0 11.9)"><tspan class="cls-2" x="0" y="0">I</tspan><tspan class="cls-4" x="4.47" y="0">n</tspan><tspan class="cls-3" x="14.06" y="0">f</tspan><tspan class="cls-2" x="19.11" y="0">o</tspan><tspan class="cls-5" x="28.14" y="0">s</tspan></text>
+  </g>
+</svg>
