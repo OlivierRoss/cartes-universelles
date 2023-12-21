@@ -50,6 +50,7 @@ header li:hover {
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  filter:contrast(110%) brightness(120%);
 }
 
 /* Overlay */
@@ -175,9 +176,10 @@ footer #representation {
 /*Page infos */
 body .container{
   z-index: -1;
+  width:100vw;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("./CarteC-extrait.jpg") center center;
   background-size: cover;
-  margin: 0;
+  position: absolute;
 }
 
 #projet {
