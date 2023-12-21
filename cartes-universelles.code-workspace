@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../OneDrive/Documents/Arts/Formation/UQAT/Applications interactives/CA"
+		},
+		{
+			"path": "../../OneDrive/Documents/Arts/Formation/UQAT/Applications interactives/TP1/violaine-lafortune-tp1-p5js"
+		},
+		{
+			"path": "../../OneDrive/Documents/Arts/Formation/Programmation/Codecademy/TeaCozy"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cartes-universelles"
+	}
+}

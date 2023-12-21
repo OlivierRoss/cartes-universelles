@@ -5,12 +5,20 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
 a {
 	text-decoration: none;
   color: black;
 }
 
+/* Navigation */
 header ul {
+  position: absolute;
+  top: 0;
   display: flex;
   width: 100%;
   list-style-type: none;
@@ -35,6 +43,7 @@ header li:hover {
 	transition:0.5s ease-out;
 }
 
+/* Body */
 #map {
   position: fixed;
   top: 0px;
@@ -42,6 +51,8 @@ header li:hover {
   height: 100vh;
   z-index: -1;
 }
+
+/* Overlay */
 
 #logo {
   opacity: 1;
@@ -115,6 +126,7 @@ header li:hover {
 	transition:0.5s ease-out;
 }
 
+/* Map Footer */
 footer{
   position: fixed;
   width: 100vw;
@@ -125,6 +137,10 @@ footer{
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+#infos{
+  padding-right: 20px;
 }
 
 #fullScreen{
@@ -156,6 +172,68 @@ footer #representation {
   margin-left: 20px;
 }
 
+/*Page infos */
+body .container{
+  z-index: -1;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("./CarteC-extrait.jpg") center center;
+  background-size: cover;
+  margin: 0;
+}
+
+#projet {
+  width: 90vw;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#titre {
+  display: flex;
+  justify-content: left;
+  margin: 50px;
+}
+
+.description {
+ margin: 50px
+}
+
+.description span{
+  font-style:italic;
+}
+
+.description a{
+  color:rgb(143, 0, 0, 0.6);
+}
+
+.description a:hover{
+  color:rgb(143, 0, 0);
+  -webkit-transition: 0.7s ease-out;
+	-moz-transition: 0.7s ease-out;
+	-o-transition: 0.7s ease-out;
+	transition: 0.7s ease-out;
+}
+
+#projet p{
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+#contact {
+  margin: 50px;
+}
+
+#contact a{
+  color:rgb(143, 0, 0, 0.6);
+}
+
+#contact a:hover{
+  color:rgb(143, 0, 0);
+  -webkit-transition: 0.7s ease-out;
+	-moz-transition: 0.7s ease-out;
+	-o-transition: 0.7s ease-out;
+	transition: 0.7s ease-out;
+}
+
 /* media queries */
 @media screen and (min-width: 620px){
   header ul {
@@ -168,9 +246,20 @@ footer #representation {
     margin-left: 10px;
   }
 }
-@media screen and (min-width: 800px){
+
+@media screen and (min-width: 1200px){
   #txtLogo h2 {
       font-size: 1em;
+    }
+
+    #projet {
+      width: 50vw;
+      margin-top: 100px;
+    }
+  
+    #projet p{
+      font-size: 1.2em;
+      line-height: 1.5;
     }
   
     /* #txtLogo {
@@ -179,10 +268,12 @@ footer #representation {
     } */
 } 
 
-@media screen and (orientation: portrait) {
-  /* Add CSS styles for Portrait orientation */
-}
+@media screen and (max-width: 290px){
+  p {
+    font-size: 0.8em;
+  }
 
-@media screen and (orientation: landscape) {
-  /* Add CSS styles for Landscape orientation */
+  #titre, .description, #contact {
+    margin: 15px;
+  }
 }
