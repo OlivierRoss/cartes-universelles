@@ -41,43 +41,7 @@ window.onload = () => {
   // Detect Landscape or Portrait mode
   portraitChangement.addEventListener('change', () => {
     location.reload()
-    // Check if orientation is portrait
-    // if (event.matches) {
-    //   console.log('Device orientation is Portrait');
-    //     //location.reload()
-    // } else {
-    //   console.log('Device orientation is Landscape');
-    // }
   });
-
-  //   /* Fullscreen */
-  //   var elem = document.documentElement;
-
-  //   /* View in fullscreen */
-  //   document.querySelector("#goFullScreen").addEventListener('click', () => {
-  //     document.querySelector("#goFullScreen").style.display = 'none';
-  //     document.querySelector("#exitFullScreen").style.display = 'block';
-  //     if (elem.requestFullscreen) {
-  //       elem.requestFullscreen();
-  //     } else if (elem.webkitRequestFullscreen) { /* Safari */
-  //       elem.webkitRequestFullscreen();
-  //     } else if (elem.msRequestFullscreen) { /* IE11 */
-  //       elem.msRequestFullscreen();
-  //     } 
-  //     });
-
-  //   /* Exit fullscreen */
-  //   document.querySelector("#exitFullScreen").addEventListener('click', () => {
-  //     document.querySelector("#exitFullScreen").style.display = 'none';
-  //     document.querySelector("#goFullScreen").style.display = 'block';
-  //     if (document.exitFullscreen) {
-  //       document.exitFullscreen();
-  //     } else if (document.webkitExitFullscreen) { /* Safari */
-  //       document.webkitExitFullscreen();
-  //     } else if (document.msExitFullscreen) { /* IE11 */
-  //       document.msExitFullscreen();
-  //     }
-  //   });
 
   //Zoom initial vertical
   let containerv = document.getElementById(id_el_osd);
@@ -88,15 +52,6 @@ window.onload = () => {
       viewer.minZoomLevel = containerv.clientHeight
     }, delai_disparition_logo);
   }
-
-  // //Zoom initial horizontal
-  // let containerh = document.getElementById(id_el_osd);
-  // if(containerh.clientWidth > containerh.clientHeight) {
-  //   setTimeout(() => {
-  //     viewer.viewport.fitHorizontally();
-  //     set_min_zoom = true;
-  //   }, delai_disparition_logo);
-  // }
 
   // Cacher le logo
   setTimeout(() => {
