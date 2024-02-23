@@ -222,6 +222,7 @@ body .container{
 
 #contact {
   margin: 50px;
+  text-align: center;
 }
 
 #contact a{
@@ -236,6 +237,31 @@ body .container{
 	transition: 0.7s ease-out;
 }
 
+#containerLogo{
+  display: flex;
+  /* padding: 50px; */
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#subventions {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#subventions img{
+  padding: 10px;
+  width: 200px
+}
+
+img {}
+
+#subventions p{
+  font-size: 0.8em;
+  text-align: center;
+}
+
 /* media queries */
 @media screen and (min-width: 620px){
   header ul {
@@ -246,6 +272,18 @@ body .container{
 
   header li {
     margin-left: 10px;
+  }
+
+  #containerLogo{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #subventions img{
+    padding: 30px;
   }
 }
 
@@ -263,11 +301,12 @@ body .container{
       font-size: 1.2em;
       line-height: 1.5;
     }
-  
-    /* #txtLogo {
-      padding-top: 200px;
-      padding-left: 100px;
-    } */
+
+    #subventions p{
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
 } 
 
 @media screen and (max-width: 290px){
@@ -275,7 +314,7 @@ body .container{
     font-size: 0.8em;
   }
 
-  #titre, .description, #contact {
+  #titre, .description, #subvention, #contact {
     margin: 15px;
   }
 }
